@@ -25,7 +25,7 @@ targetCompatibility = 1.8
 
 repositories {
     jcenter()
-    mavenCentral()
+//    mavenCentral()
 }
 
 def swaggerVersion = "2.9.0"

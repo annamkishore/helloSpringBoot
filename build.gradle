@@ -28,8 +28,7 @@ repositories {
     mavenCentral()
 }
 
-def swaggerVersion = "2.4.0"
-//swaggerVersion = "2.9.0"
+def swaggerVersion = "2.6.0"
 
 dependencies {
     compile "org.springframework.boot:spring-boot-starter-web"

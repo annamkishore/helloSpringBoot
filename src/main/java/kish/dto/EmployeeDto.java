@@ -2,7 +2,7 @@ package kish.dto;
 
 import java.util.Date;
 
-public class Employee {
+public class EmployeeDto {
     String employeeId;
     String employeeName;
     String email;

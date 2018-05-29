@@ -1,14 +1,20 @@
-package hello;
+package kish.controllers;
 
-
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/api")
 public class HelloController {
 
-    @RequestMapping("/")
+    @RequestMapping("/controllers")
     public String home() {
         return "Hello World 1";
+    }
+
+    @GetMapping("/wish")
+    public String service1() {
+        return "Good Morning";
     }
 }

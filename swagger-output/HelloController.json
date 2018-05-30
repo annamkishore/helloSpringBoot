@@ -79,9 +79,9 @@
         "parameters": [
           {
             "name": "employeeId",
-            "in": "query",
+            "in": "path",
             "description": "employeeId",
-            "required": false,
+            "required": true,
             "type": "string"
           }
         ],

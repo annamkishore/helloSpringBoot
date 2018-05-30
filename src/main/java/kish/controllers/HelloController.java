@@ -23,7 +23,7 @@ public class HelloController {
     }
 
     @GetMapping("/employeeGet/{employeeId}")
-    public EmployeeDto getEmployee(String employeeId) {
-        return null;
+    public EmployeeDto getEmployee(@PathVariable(value = "employeeId") String employeeId) {
+        return new EmployeeDto(employeeId);
     }
 }

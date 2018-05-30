@@ -3,11 +3,18 @@ package kish.dto;
 import java.util.Date;
 
 public class EmployeeDto {
-    String employeeId;
-    String employeeName;
-    String email;
-    String phone;
-    Date joiningDate;
+    private String employeeId;
+    private String employeeName;
+    private String email;
+    private String phone;
+    private Date joiningDate;
+
+    public EmployeeDto() {
+    }
+
+    public EmployeeDto(String employeeId) {
+        this.employeeId = employeeId;
+    }
 
     public String getEmployeeId() {
         return employeeId;

@@ -20,6 +20,90 @@
     }
   ],
   "paths": {
+    "/api/employeeAdd": {
+      "put": {
+        "tags": [
+          "hello-controller"
+        ],
+        "summary": "addEmployee",
+        "operationId": "addEmployeeUsingPUT",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "employeeDto",
+            "description": "employeeDto",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/EmployeeDto"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/employeeGet/{employeeId}": {
+      "get": {
+        "tags": [
+          "hello-controller"
+        ],
+        "summary": "getEmployee",
+        "operationId": "getEmployeeUsingGET",
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "name": "employeeId",
+            "in": "query",
+            "description": "employeeId",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/EmployeeDto"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
     "/api/hello": {
       "post": {
         "tags": [
@@ -83,6 +167,30 @@
           }
         }
       }
+    }
+  },
+  "definitions": {
+    "EmployeeDto": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "employeeId": {
+          "type": "string"
+        },
+        "employeeName": {
+          "type": "string"
+        },
+        "joiningDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "phone": {
+          "type": "string"
+        }
+      },
+      "title": "EmployeeDto"
     }
   }
 }
